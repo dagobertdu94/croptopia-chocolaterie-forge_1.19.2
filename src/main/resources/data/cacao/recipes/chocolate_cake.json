@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "000",
+    "212",
+    "333"
+  ],
+  "key": {
+    "0": {
+      "tag": "c:milks"
+    },
+    "1": {
+      "item": "minecraft:egg"
+    },
+    "2":{
+      "item": "cacao:cocoa_powder"
+    },
+    "3":{
+      "tag": "c:flour"
+    }
+  },
+  "result": {
+    "item": "cacao:chocolate_cake",
+    "count": 1
+  }
+}

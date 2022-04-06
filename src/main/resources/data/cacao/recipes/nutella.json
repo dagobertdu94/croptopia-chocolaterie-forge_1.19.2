@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cacao:milk_chocolate"
+    },
+    {
+      "item": "cacao:milk_chocolate"
+    },
+    {
+      "item": "cacao:milk_chocolate"
+    },
+    {
+      "item": "croptopia:vanilla"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "croptopia:nuts"
+    },
+    {
+      "item": "croptopia:cooking_pot"
+    }
+  ],
+  "result": {
+    "item": "cacao:nutella",
+    "count": 1
+  }
+}

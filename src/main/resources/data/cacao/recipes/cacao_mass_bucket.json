@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "232",
+    "212",
+    "222"
+  ],
+  "key": {
+    "1": {
+      "item": "cacao:manual_food_grinder"
+    },
+    "2": {
+      "item": "cacao:cacao_nibs"
+    },
+    "3": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "result": {
+    "item": "cacao:cacao_mass_bucket",
+    "count": 1
+  }
+}

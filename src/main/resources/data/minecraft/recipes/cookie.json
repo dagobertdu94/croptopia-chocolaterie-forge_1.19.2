@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:flour"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "croptopia:butter"
+    },
+    {
+      "item": "cacao:dark_chocolate"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cookie",
+    "count": 4
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "212",
+    " 2 "
+  ],
+  "key": {
+    "1": {
+      "item": "cacao:cacao_mass_bucket"
+    },
+    "2": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "cacao:cacao_mass_bottle",
+    "count": 16
+  }
+}

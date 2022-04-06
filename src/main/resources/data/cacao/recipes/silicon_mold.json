@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 2 ",
+    "212",
+    " 2 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:slime_ball"
+    },
+    "2": {
+      "item": "cacao:silicon_dust"
+    }
+  },
+  "result": {
+    "item": "cacao:silicon_mold",
+    "count": 1
+  }
+}

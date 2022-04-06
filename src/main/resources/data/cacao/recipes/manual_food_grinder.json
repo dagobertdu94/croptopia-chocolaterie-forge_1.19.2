@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "101",
+    "000",
+    "222"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_ingot"
+    },
+    "1": {
+      "item": "minecraft:glass"
+    },
+    "2": {
+      "tag": "minecraft:planks"
+    }
+  },
+
+  "result": {
+    "item": "cacao:manual_food_grinder",
+    "count": 1
+  }
+}
