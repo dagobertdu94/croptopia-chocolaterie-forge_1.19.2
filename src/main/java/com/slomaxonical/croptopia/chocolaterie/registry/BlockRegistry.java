@@ -17,7 +17,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.ToIntFunction;
 
-import static com.slomaxonical.croptopia.chocolaterie.CroptopiaChocolaterie.registerBlock;
 
 public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, CroptopiaChocolaterie.MOD_ID);

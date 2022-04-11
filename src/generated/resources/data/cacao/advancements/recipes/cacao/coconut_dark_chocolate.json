@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cacao:coconut_dark_chocolate"
+    ]
+  },
+  "criteria": {
+    "has_cacao_bottle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cacao:cacao_mass_bottle"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cacao:coconut_dark_chocolate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cacao_bottle",
+      "has_the_recipe"
+    ]
+  ]
+}

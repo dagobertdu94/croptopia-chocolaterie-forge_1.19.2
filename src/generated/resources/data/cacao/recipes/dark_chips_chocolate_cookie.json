@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:flour"
+    },
+    {
+      "item": "cacao:cocoa_powder"
+    },
+    {
+      "item": "croptopia:butter"
+    },
+    {
+      "item": "cacao:dark_chocolate"
+    }
+  ],
+  "result": {
+    "item": "cacao:dark_chips_chocolate_cookie",
+    "count": 2
+  }
+}

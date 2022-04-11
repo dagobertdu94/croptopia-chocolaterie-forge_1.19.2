@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cacao:cacao_butter_bottle"
+    ]
+  },
+  "criteria": {
+    "has_cacao_mass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cacao:cacao_mass_bucket"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cacao:cacao_butter_bottle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cacao_mass",
+      "has_the_recipe"
+    ]
+  ]
+}
