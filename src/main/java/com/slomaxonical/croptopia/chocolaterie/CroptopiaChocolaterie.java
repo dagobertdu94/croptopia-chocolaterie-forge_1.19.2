@@ -15,7 +15,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.data.event.GatherDataEvent;
 import org.slf4j.Logger;
 
 @Mod("cacao")
@@ -43,9 +43,10 @@ public class CroptopiaChocolaterie {
     }
     public void gatherData(GatherDataEvent event){
         BlockTagsProvider provider = new CacaoBlockTags(event.getGenerator(), event.getExistingFileHelper());
-        event.getGenerator().addProvider(provider);
-        event.getGenerator().addProvider(new CacaoRecipes(event.getGenerator()));
-        event.getGenerator().addProvider(new CacaoItemTags(event.getGenerator(),provider, event.getExistingFileHelper()));
+        
+        event.getGenerator().addProvider(true, provider);
+        event.getGenerator().addProvider(true, new CacaoRecipes(event.getGenerator()));
+        event.getGenerator().addProvider(true, new CacaoItemTags(event.getGenerator(),provider, event.getExistingFileHelper()));
     }
     @SubscribeEvent
    // public void onServerStarting(ServerStartingEvent event){}//Do something when the server starts
