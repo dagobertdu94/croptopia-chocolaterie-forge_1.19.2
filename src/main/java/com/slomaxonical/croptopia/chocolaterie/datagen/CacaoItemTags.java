@@ -16,8 +16,9 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import java.util.Set;
 import java.util.function.Supplier;
 
-import static me.thonk.croptopia.registry.ItemRegistry.oatmealCookie;
-import static me.thonk.croptopia.registry.ItemRegistry.nuttyCookie;
+import com.epherical.croptopia.register.Content;
+//import static me.thonk.croptopia.registry.ItemRegistry.oatmealCookie;
+//import static me.thonk.croptopia.registry.ItemRegistry.nuttyCookie;
 
 public class CacaoItemTags extends ItemTagsProvider {
     public CacaoItemTags(DataGenerator generator, BlockTagsProvider provider, ExistingFileHelper existingFileHelper) {
@@ -42,7 +43,7 @@ public class CacaoItemTags extends ItemTagsProvider {
     }
     @Override
     protected void addTags(){
-        tag(COOKIES).add(Items.COOKIE,nuttyCookie,oatmealCookie, ItemRegistry.WHITE_CHIPS_CHOCOLATE_COOKIE.get(),ItemRegistry.WHITE_CHIPS_COOKIE.get(),ItemRegistry.DARK_CHIPS_CHOCOLATE_COOKIE.get());
+        tag(COOKIES).add(Items.COOKIE,Content.NUTTY_COOKIE,Content.OATMEAL_COOKIE, ItemRegistry.WHITE_CHIPS_CHOCOLATE_COOKIE.get(),ItemRegistry.WHITE_CHIPS_COOKIE.get(),ItemRegistry.DARK_CHIPS_CHOCOLATE_COOKIE.get());
         tag(CHOCOLATES).add(ItemRegistry.DARK_CHOCOLATE.get(),ItemRegistry.MILK_CHOCOLATE.get(),ItemRegistry.WHITE_CHOCOLATE.get());
     }
 }
