@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "cacao:dark_chocolate",
+    "cacao:milk_chocolate",
+    "cacao:white_chocolate"
+  ]
+}

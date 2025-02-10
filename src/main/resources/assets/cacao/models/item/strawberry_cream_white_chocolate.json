@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "cacao:item/strawberry_cream_white_chocolate"
+  }
+}

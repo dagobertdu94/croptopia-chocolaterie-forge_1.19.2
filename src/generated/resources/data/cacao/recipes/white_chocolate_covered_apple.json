@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "010",
+    " 2 "
+  ],
+  "key": {
+    "0": {
+      "item": "cacao:white_chocolate"
+    },
+    "1": {
+      "item": "minecraft:apple"
+    },
+    "2": {
+      "item": "croptopia:cooking_pot"
+    }
+  },
+  "result": {
+    "item": "cacao:white_chocolate_covered_apple"
+  }
+}

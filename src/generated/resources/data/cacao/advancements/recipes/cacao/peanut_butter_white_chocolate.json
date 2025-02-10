@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cacao:peanut_butter_white_chocolate"
+    ]
+  },
+  "criteria": {
+    "has_cacao_butter_bottle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cacao:cacao_butter_bottle"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cacao:peanut_butter_white_chocolate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cacao_butter_bottle",
+      "has_the_recipe"
+    ]
+  ]
+}

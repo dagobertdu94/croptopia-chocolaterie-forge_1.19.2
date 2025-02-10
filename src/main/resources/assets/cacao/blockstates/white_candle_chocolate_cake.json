@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "cacao:block/white_candle_chocolate_cake"
+    },
+    "lit=true": {
+      "model": "cacao:block/white_candle_chocolate_cake_lit"
+    }
+  }
+}

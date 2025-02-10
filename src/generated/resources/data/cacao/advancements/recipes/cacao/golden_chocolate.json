@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cacao:golden_chocolate"
+    ]
+  },
+  "criteria": {
+    "has_chocolates": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "cacao:chocolates"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cacao:golden_chocolate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_chocolates",
+      "has_the_recipe"
+    ]
+  ]
+}
