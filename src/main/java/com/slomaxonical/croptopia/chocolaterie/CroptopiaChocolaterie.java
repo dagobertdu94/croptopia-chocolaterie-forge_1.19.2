@@ -40,7 +40,7 @@ public class CroptopiaChocolaterie {
     public static final String MOD_ID = "cacao";
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
     public static final RegistryObject<CreativeModeTab> TAB = CREATIVE_MODE_TABS.register("cacao", () -> CreativeModeTab.builder()
-    		.withTabsBefore(CreativeModeTabs.COMBAT).displayItems((param, out) -> ItemRegistry.ITEMS.getEntries().forEach((obj) -> obj.ifPresent(out::accept)))
+    		.withTabsBefore(CreativeModeTabs.SPAWN_EGGS).displayItems((param, out) -> ItemRegistry.ITEMS.getEntries().forEach((obj) -> obj.ifPresent(out::accept)))
     		.title(Component.translatable("cacao")).icon(() -> new ItemStack(ItemRegistry.CARAMEL_MILK_CHOCOLATE.get())).build());
     
     public CroptopiaChocolaterie(){
