@@ -4,7 +4,7 @@ license="All rights reserved"
 issueTrackerURL="https://github.com/Slomaxonical-907/croptopia-chocolaterie-forge/issues" #optional
 [[mods]] #mandatory
 modId="cacao" #mandatory
-version="${file.jarVersion}" #mandatory
+version="1.1" #mandatory
 displayName="Croptopia's Chocolaterie" #mandatory
 logoFile="cacao.png" #optional
 credits="" #optional
