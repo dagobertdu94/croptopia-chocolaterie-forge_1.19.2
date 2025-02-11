@@ -48,6 +48,7 @@ public class CroptopiaChocolaterie {
 
         BlockRegistry.BLOCKS.register(modBus);
         ItemRegistry.ITEMS.register(modBus);
+        CREATIVE_MODE_TABS.register(modBus);
         modBus.addListener(this::gatherData);
 
         MinecraftForge.EVENT_BUS.register(this);
