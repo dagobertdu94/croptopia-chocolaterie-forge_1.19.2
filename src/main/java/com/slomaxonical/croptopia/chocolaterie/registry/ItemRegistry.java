@@ -19,6 +19,7 @@ import static com.epherical.croptopia.util.FoodConstructor.*;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CroptopiaChocolaterie.MOD_ID);
+    
     public static RegistryObject<Item> CACAO_NIBS = ITEMS.register("cacao_nibs",() -> new Item(createGroup()));
     public static RegistryObject<Item> CACAO_MASS_BUCKET = ITEMS.register("cacao_mass_bucket",() -> new Item(createGroup().craftRemainder(Items.BUCKET)));
     public static RegistryObject<Item> CACAO_MASS_BOTTLE = ITEMS.register("cacao_mass_bottle",() -> new Item(createGroup()));

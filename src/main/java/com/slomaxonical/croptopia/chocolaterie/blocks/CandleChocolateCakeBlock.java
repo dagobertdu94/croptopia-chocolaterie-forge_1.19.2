@@ -85,7 +85,7 @@ public class CandleChocolateCakeBlock extends AbstractCandleBlock {
     }
 
     public boolean canSurvive(BlockState p_152891_, LevelReader p_152892_, BlockPos p_152893_) {
-        return p_152892_.getBlockState(p_152893_.below()).getMaterial().isSolid();
+        return p_152892_.getBlockState(p_152893_.below()).isSolid();
     }
 
     public int getAnalogOutputSignal(BlockState p_152880_, Level p_152881_, BlockPos p_152882_) {

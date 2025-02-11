@@ -1,21 +1,20 @@
 package com.slomaxonical.croptopia.chocolaterie.datagen;
 
-import com.slomaxonical.croptopia.chocolaterie.CroptopiaChocolaterie;
-import com.slomaxonical.croptopia.chocolaterie.registry.BlockRegistry;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup.Provider;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.VanillaBlockTagsProvider;
 import net.minecraft.tags.BlockTags;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import org.jetbrains.annotations.Nullable;
 
 import static com.slomaxonical.croptopia.chocolaterie.registry.BlockRegistry.*;
 
-public class CacaoBlockTags extends BlockTagsProvider {
-    public CacaoBlockTags(DataGenerator p_126511_, @Nullable ExistingFileHelper existingFileHelper) {
-        super(p_126511_, CroptopiaChocolaterie.MOD_ID, existingFileHelper);
+import java.util.concurrent.CompletableFuture;
+
+public class CacaoBlockTags extends VanillaBlockTagsProvider {
+    public CacaoBlockTags(PackOutput p_126511_, CompletableFuture<Provider> prov) {
+    	super(p_126511_, prov);
     }
     @Override
-    protected void addTags() {
+    protected void addTags(Provider prov) {
         tag(BlockTags.CANDLE_CAKES).add(
                 CANDLE_CHOCOLATE_CAKE.get(),
                 BLACK_CANDLE_CHOCOLATE_CAKE.get(),

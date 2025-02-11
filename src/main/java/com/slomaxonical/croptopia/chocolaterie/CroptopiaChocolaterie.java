@@ -6,7 +6,12 @@ import com.slomaxonical.croptopia.chocolaterie.datagen.CacaoItemTags;
 import com.slomaxonical.croptopia.chocolaterie.datagen.CacaoRecipes;
 import com.slomaxonical.croptopia.chocolaterie.registry.BlockRegistry;
 import com.slomaxonical.croptopia.chocolaterie.registry.ItemRegistry;
-import net.minecraft.data.tags.BlockTagsProvider;
+
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.HolderLookup.Provider;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.VanillaBlockTagsProvider;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +20,13 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.data.event.GatherDataEvent;
+
+import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.stream.Stream;
+
 import org.slf4j.Logger;
 
 @Mod("cacao")
@@ -33,25 +44,21 @@ public class CroptopiaChocolaterie {
         ItemRegistry.ITEMS.register(modBus);
         modBus.addListener(this::gatherData);
 
-        MinecraftForge.EVENT_BUS.register(this);
-        CHOCOLATERIE_ITEM_GROUP = new CreativeModeTab("cacao") {
-            @Override
-            public ItemStack makeIcon() {
-                return new ItemStack(ItemRegistry.CARAMEL_MILK_CHOCOLATE.get());
-            }
-        };
+        MinecraftForge.EVENT_BUS.register(this);CreativeModeTab.DisplayItemsGenerator s;
+        CHOCOLATERIE_ITEM_GROUP = CreativeModeTab.builder().displayItems((param, out) -> ItemRegistry.ITEMS.getEntries().forEach((obj) -> obj.ifPresent(out::accept)))
+        		.title(Component.translatable("cacao")).icon(() -> new ItemStack(ItemRegistry.CARAMEL_MILK_CHOCOLATE.get())).build();
     }
     public void gatherData(GatherDataEvent event){
-        BlockTagsProvider provider = new CacaoBlockTags(event.getGenerator(), event.getExistingFileHelper());
-        
+    	VanillaBlockTagsProvider provider = new CacaoBlockTags(event.getGenerator().getPackOutput(), event.getLookupProvider());
+    	
         event.getGenerator().addProvider(true, provider);
-        event.getGenerator().addProvider(true, new CacaoRecipes(event.getGenerator()));
-        event.getGenerator().addProvider(true, new CacaoItemTags(event.getGenerator(),provider, event.getExistingFileHelper()));
+        event.getGenerator().addProvider(true, new CacaoRecipes(event.getGenerator().getPackOutput()));
+        event.getGenerator().addProvider(true, new CacaoItemTags(event.getGenerator().getPackOutput(),CompletableFuture.completedFuture(Provider.create(Stream.empty())),provider.contentsGetter(), event.getExistingFileHelper()));
     }
-    @SubscribeEvent
+    //@SubscribeEvent
    // public void onServerStarting(ServerStartingEvent event){}//Do something when the server starts
-
+    
     public static Item.Properties createGroup() {
-        return new Item.Properties().tab(CHOCOLATERIE_ITEM_GROUP);
+    	return new Item.Properties();
     }
 }
