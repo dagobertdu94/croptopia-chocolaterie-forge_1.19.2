@@ -3,7 +3,6 @@ package com.slomaxonical.croptopia.chocolaterie.datagen;
 import com.slomaxonical.croptopia.chocolaterie.CroptopiaChocolaterie;
 import com.slomaxonical.croptopia.chocolaterie.registry.ItemRegistry;
 
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
