@@ -32,4 +32,9 @@ I tried to make the process as close to real chocolate making as possible:
     versionRange="[1.20.1,1.21)"
     ordering="NONE"
     side="BOTH"
-    
+[[dependencies.cacao]]
+    modId="croptopia"
+    mandatory=true
+    versionRange="[3,)"
+    ordering="AFTER"
+    side="BOTH"
